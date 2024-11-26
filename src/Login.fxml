@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="675.0" maxWidth="1200.0" minHeight="675.0" minWidth="1200.0" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Login">
+    <left>
+        <AnchorPane prefWidth="500.0" styleClass="left-pane">
+            <children>
+                <!-- Placeholder for Logo -->
+                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="200.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image></ImageView>
+                
+                <Label layoutX="204.0" layoutY="349.0" styleClass="left-title" text="LynkX" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Black Italic" size="32.0" />
+               </font></Label>
+                <Label layoutX="157.0" layoutY="397.0" styleClass="left-subtitle" text="Connect with the world" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat Regular" size="18.0" />
+               </font></Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="675.0" prefWidth="600.0" styleClass="center-pane">
+            <children>
+                <Label layoutX="172.0" layoutY="169.0" styleClass="center-title" text="Welcome Back! Login to you Account">
+               <font>
+                  <Font name="Montserrat Bold" size="18.0" />
+               </font></Label>
+                <TextField fx:id="username" layoutX="150.0" layoutY="276.0" prefHeight="40.0" prefWidth="400.0" promptText="Enter your username" styleClass="input-field">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font></TextField>
+                
+                <Label layoutX="150.0" layoutY="338.0" styleClass="input-label" text="Password">
+               <font>
+                  <Font name="Montserrat Regular" size="16.0" />
+               </font></Label>
+                <PasswordField fx:id="password" layoutX="150.0" layoutY="368.0" prefHeight="40.0" prefWidth="400.0" promptText="Enter your password" styleClass="input-field">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font></PasswordField>
+                
+                <Button fx:id="loginButton" layoutX="210.0" layoutY="432.0" mnemonicParsing="false" onAction="#authenticateLogin" prefHeight="50.0" prefWidth="280.0" styleClass="login-button" text="Login">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+               <font>
+                  <Font name="Montserrat Regular" size="16.0" />
+               </font>
+                </Button>
+                
+                <Label fx:id="forgotPassword" layoutX="286.0" layoutY="499.0" styleClass="forgot-password" text="Forgot Password?">
+               <font>
+                  <Font name="Montserrat Regular" size="14.0" />
+               </font></Label>
+                
+                <!-- Error Message -->
+                <Label fx:id="wrongLogIn" layoutX="150.0" layoutY="232.0" prefHeight="18.0" prefWidth="202.0" styleClass="error-message" text="*Invalid Username or Password" visible="false">
+               <font>
+                  <Font name="Montserrat Regular" size="12.0" />
+               </font></Label>
+            <Label layoutX="150.0" layoutY="251.0" styleClass="input-label" text="Username">
+               <font>
+                  <Font name="Montserrat Regular" size="16.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

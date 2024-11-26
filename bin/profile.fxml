@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: #111b21;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.profile">
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <!-- Profile Picture -->
+         <ImageView fx:id="profileImageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.5, 0, 0);">
+            <image>
+               <Image url="@images/profile.png" />
+            </image>
+         </ImageView>
+         <!-- Change Profile Picture Button -->
+         <Button mnemonicParsing="false" onAction="#changeProfilePicture" style="-fx-background-color: #00a884; -fx-text-fill: white; -fx-padding: 5 10; -fx-font-size: 14px; -fx-border-color: #00775f; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5;" text="Change Picture" />
+
+         <!-- User Details -->
+         <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #202c33; -fx-padding: 10; -fx-border-color: #00a884; -fx-border-width: 1; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <!-- Username Section -->
+            <HBox alignment="CENTER" spacing="10.0">
+               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/exit.png" />
+                  </image>
+               </ImageView>
+               <Label style="-fx-font-size: 14px; -fx-text-fill: #00a884;" text="Username:" />
+               <TextField fx:id="usernameField" promptText="Enter your username" style="-fx-font-size: 14px; -fx-text-fill: #00a884; -fx-background-color: #2a3942;" />
+            </HBox>
+            <!-- Roll Number Section -->
+            <HBox alignment="CENTER" spacing="10.0">
+               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/search.png" />
+                  </image>
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin>
+               </ImageView>
+               <Text style="-fx-font-size: 14px; -fx-fill: #00a884;" text="Roll Number: 12345" />
+            </HBox>
+            <!-- Batch ID Section -->
+            <HBox alignment="CENTER" spacing="10.0">
+               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/joinBatch.png" />
+                  </image>
+               </ImageView>
+               <Text style="-fx-font-size: 14px; -fx-fill: #00a884;" text="Batch ID: B2024" />
+            </HBox>
+            <!-- Save Changes Button -->
+            <Button mnemonicParsing="false" onAction="#saveChanges" style="-fx-background-color: #00775f; -fx-text-fill: white; -fx-padding: 5 10; -fx-font-size: 14px; -fx-border-radius: 5; -fx-background-radius: 5;" text="Save Changes" />
+         </VBox>
+      </VBox>
+   </center>
+   <top>
+      <!-- Back Button with Icon -->
+      <Button fx:id="backButton" mnemonicParsing="false" onAction="#navigateToChatPages" style="-fx-background-color: #2a3942; -fx-text-fill: white; -fx-padding: 5 10; -fx-font-size: 14px; -fx-border-color: #3c4f55; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5;" text="Back" translateX="10.0" translateY="10.0" BorderPane.alignment="TOP_LEFT">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </top>
+</BorderPane>
